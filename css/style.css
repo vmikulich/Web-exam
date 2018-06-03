@@ -9,9 +9,15 @@ nav li{
 	text-decoration: none;
 	list-style: none;
 }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
 html,
 body {
-  height: 100%;
+	height: 100%;
+	
 }
 body{
 	display: flex;
@@ -20,6 +26,7 @@ body{
 }
 header{
 	background: #000;
+	overflow: auto;
 }
 .signin-signup{
 	padding-top: 10px;
@@ -35,6 +42,7 @@ header{
 }
 .wrap{
 	flex: 1 0 auto;
+	
 }
 header .or{
 	color: #717171;
@@ -97,7 +105,7 @@ nav{
 	position: relative;
 	border: 1px solid black;
 	background-color: #000;
-	overflow: auto;
+
 }
 .search input[type="text"]{
 	height: 48px;
@@ -237,7 +245,7 @@ nav{
 .car_sale{
 	border:2px solid #d4d2d2;
 	border-radius: 5px;
-	overflow: auto;
+	
 }
 .car_sale:not(:first-child){
 	margin-top: 28px;
@@ -485,7 +493,6 @@ footer p{
 	padding: 8px 8px 0;
 	border:2px solid #d4d2d2;
 	border-radius: 5px;
-	overflow: auto;
 	margin-bottom: 3%;
 }
 .pair_name{
@@ -538,6 +545,9 @@ footer p{
 		background: #000;
 		padding-left: 10px;
 	}
+	.return{
+		bottom: -200%;
+	}
 	header{
 		display: flex;
 		flex-flow: row;
@@ -551,7 +561,27 @@ footer p{
 	}
 	.mob_nav:active{
 		background-color: rgba(255, 255, 255, 0.4)
-
+	}
+	.topnav li {
+		display: block;
+		margin-right: 0;
+		padding: 14px 16px;
+	}
+	.topnav li a{
+		width: 100%;
+		padding: auto;
+	}
+	.topnav{
+		z-index: 100;
+		border-bottom: 2px solid #000;
+		display: none;
+		text-align: left;
+	}
+	nav{
+		max-width:100%;
+	}
+	main{
+		margin-top: -60px;
 	}
 }
 @media screen and (max-width: 705px) {
@@ -580,9 +610,6 @@ footer p{
 	}
 	#map{
 		order: 3;
-	}
-	.return{
-		bottom: -200%;
 	}
 	.title_location{
 		font-size: 40px;
