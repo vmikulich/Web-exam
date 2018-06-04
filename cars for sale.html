@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cars for sale | MikulichMotors</title>
 	<link rel="shortcut icon" href="img/icon.png" type="image/png">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/sales.css">
 	<link rel="viewport" content="width-device-width, initial-scale=1.0">
 </head>
 <body>
@@ -24,7 +24,7 @@
 	<nav>
 		<ul class="topnav" id="mytopnav">
 			<li><a href="home.html">Home</a></li>
-			<li><a href="cars for sale.html" >Cars for Sale</a></li>
+			<li><a class="currentPage" href="cars for sale.html" >Cars for Sale</a></li>
 			<li><a href="car parts for sale.html">Car parts for sale</a></li>
 			<li><a href="service & repair.html">Service & Repair</a></li>
 			<li><a href="about us.html">About Us</a></li>
@@ -34,6 +34,11 @@
 		<div class="search_items">
 			<input type="text" name="search" placeholder="Enter mark, model, type, year">
 			<input type="button" name="btn" value="Search">
+		</div>
+	</div>
+	<div class="mobFilterAndNews">
+		<div class="mob_container">
+			<button class="mob_filter">Filter</button><button class="mob_news">Auto News</button>
 		</div>
 	</div>
 	<main>
@@ -183,37 +188,37 @@
 						<a href="#"><p><img class="car_foto" src="img/mustang1.png" alt="car"></p></a>
 						<div class="info">
 							<p class="price">$31,180</p>
-							<h4>Characteristics:</h4>
+							<span>Characteristics:</span>
 							<p class="characteristics">EPA-Est. MPG 20 City / 28 HWY</p>
 							<p class="colors"><span class="prorerty">Colors: </span>white, red, blue, black</p>
 						</div>
 					</div>
-					<div class="car_sale">
+					<div class="car_sale clearfix">
 						<a href="#" class="car_name" target="_blank">2018 FORD MUSTANG GT PREMIUM FASTBACK</a>
 						<a href="#"><p><img class="car_foto" src="img/mustang3.png" alt="car"></p></a>
 						<div class="info">
 							<p class="price">$39,190</p>
-							<h4>Characteristics:</h4>
+							<span>Characteristics:</span>
 							<p class="characteristics">EPA-Est. MPG 15 City / 25 HWY</p>
 							<p class="colors"><span class="prorerty">Colors: </span>white, red, blue, black</p>
 						</div>
 					</div>
-					<div class="car_sale">
+					<div class="car_sale clearfix">
 						<a href="#" class="car_name" target="_blank">2018 FORD MUSTANG SHELBY GT350®</a>
 						<a href="#"><p><img class="car_foto" src="img/mustang4.png" alt="car"></p></a>
 						<div class="info">
 							<p class="price">$57,240</p>
-							<h4>Characteristics:</h4>
+							<span>Characteristics:</span>
 							<p class="characteristics">EPA-Est. MPG 14 City / 21 HWY</p>
 							<p class="colors"><span class="prorerty">Colors: </span>white, red, blue, black</p>
 						</div>
 					</div>
-					<div class="car_sale">
+					<div class="car_sale clearfix">
 						<a href="#" class="car_name" target="_blank">2018 FORD MUSTANG SHELBY® GT350R</a>
 						<a href="#"><p><img class="car_foto" src="img/mustang2.png" alt="car"></p></a>
 						<div class="info">
 							<p class="price">$64,740</p>
-							<h4>Characteristics:</h4>
+							<span>Characteristics:</span>
 							<p class="characteristics">EPA-Est. MPG 14 City / 21 HWY</p>
 							<p class="colors"><span class="prorerty">Colors: </span>white, red, blue, black</p>
 						</div>
@@ -273,5 +278,7 @@
 	<script type="text/javascript" src="js/scroll.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/retutn1.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script type="text/javascript" src="js/script1.js"></script>
 </body>
 </html>

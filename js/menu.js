@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $('.mob_nav').click(function() {
-    $('nav .topnav').slideToggle(500);
+    $('nav .topnav').slideToggle(200);
   });
   
 

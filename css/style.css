@@ -24,6 +24,7 @@ body{
   flex-direction: column;
 	font-family: 'Arial', sans-serif;
 }
+
 header{
 	background: #000;
 	overflow: auto;
@@ -78,24 +79,28 @@ nav{
 	text-align: center;
 	max-width: 100%;
 	height: 50px;
+	padding: 15px 0;
 }
 .topnav{
 	position: relative;
 	background-color: #fff;
 	font-size: 25px;
-	margin-top: 15px;
 }
 .topnav li {
   display: inline-block;
   margin-right: 1%;
 }
 .topnav li a{
+	display: block;
 	color: #000;
 	text-align: center;
 	padding: 14px 16px;
 	border-bottom: 2px solid transparent;
 }
 .topnav li a:hover{
+	border-bottom: 2px solid #000;
+}
+.topnav li .currentPage{
 	border-bottom: 2px solid #000;
 }
 .search{
@@ -105,7 +110,6 @@ nav{
 	position: relative;
 	border: 1px solid black;
 	background-color: #000;
-
 }
 .search input[type="text"]{
 	height: 48px;
@@ -157,147 +161,7 @@ nav{
 	display: flex;
 	justify-content: space-between;
 }
-.auto-news{
-	text-align: center;
-	width: 21%;
-}
-.news_items{
-	margin-top: 20px;
-}
-.news_item:not(:first-child){
-	margin-top: 20px;
-}
-.news_title{
-	font-size: 20px;
-	font-weight: bold;
-}
-.news_item img{
-	max-width: 100%;
-}
-.description{
-	margin-top: 15px;
-	font-size: 15px;
-	font-weight: bold;
-}
-.description a{
-	color:#000;
-}
-.picture_news{
-	margin-top: 8px;
-}
-.filter{
-	width: 21%;
-}
-.filter1{
-	border:1px solid #d2d0d0;
-}
-.filter .filter_items *{
-	margin-top: 13px;
-}
-.name{
-	font-size: 20px;
-	font-weight: bold;
-	text-align: center;
-	margin-top: 13px;
-}
-.filter p:not(.name){
-	font-size: 17px;
-	font-weight: bold;
-}
-.filter_items{
-	width: 80%;
-	margin:auto;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-.filter button{
-	width: 100%;
-	height: 35px;
-	background-color: #000;
-	color: #fff;
-	font-size: 16px;
-	margin-bottom: 12px;
-	font-weight: bold;
-	border:2px solid #000;
-	cursor: pointer;
-}
-.filter button:active{
-	color: #000;
-	border: 2px solid #000;
-	background-color: #fff;
-	outline: none;
-}
-.filter select{
-	width: 100%;
-	height: 30px;
-	font-size: 15px;
-	outline: none;
-	cursor: pointer;
-}
-.shop_space{
-	width: 50%;
-}
-.car_sale{
-	border:2px solid #d4d2d2;
-	border-radius: 5px;
-	
-}
-.car_sale:not(:first-child){
-	margin-top: 28px;
-}
-.car_sale{
-	padding-top: 15px;
-}
-.car_name{
-	width: 100%;
-	color: #2a67cb;
-	margin-top: 15px;
-	margin-left: 4px;
-	font-size: 15px;
-	font-weight: bold;
-}
-.car_name:hover{
-	border-bottom: 1px solid #2a67cb;
-}
-.car_foto:hover ~ .car_name{
-	border-bottom: 1px solid #2a67cb;
-}
-.price{
-	color: #1e8416;
-	font-size: 22px;
-	font-weight: bold;
-}
-.shop_space h4{
-	font-size: 17px;
-	margin-top: 11px;
-}
-.characteristics{
-	font-size: 15px;
-	margin-top: 5px;
-}
-.prorerty{
-	font-weight: bold;
-	font-size: 17px;
-	margin-top: 16px;
-}
-.colors{
-	font-size: 17px;
-	margin-top: 13px;
-}
-.car_foto{
-	max-width: 55%;
-	margin-bottom: 22px;
-	float: left;
-	margin-top: 40px;
-}
-.info{
-	margin-top: 42px;
-}
+
 .next_page{
 	text-align: center;
 	width: 100%;
@@ -356,7 +220,34 @@ footer p{
 	flex-flow: row wrap;
 	justify-content: space-between;
 }
-
+.auto-news{
+	text-align: center;
+	width: 21%;
+}
+.news_items{
+	margin-top: 20px;
+}
+.news_item:not(:first-child){
+	margin-top: 20px;
+}
+.news_title{
+	font-size: 20px;
+	font-weight: bold;
+}
+.news_item img{
+	max-width: 100%;
+}
+.description{
+	margin-top: 15px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.description a{
+	color:#000;
+}
+.picture_news{
+	margin-top: 8px;
+}
 
 
 
@@ -466,56 +357,6 @@ footer p{
 	list-style-image: url(../img/mark.png);
 }
 
-.part_items{
-	max-width: 1024px;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	justify-content: space-between;
-}
-.car_parts{
-	position: relative;
-	width: 50%;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	align-content: space-around;
-	box-sizing: border-box;
-}
-.car_part{
-	width: 45%;
-	padding: 8px 8px 0;
-	border:2px solid #d4d2d2;
-	border-radius: 5px;
-	margin-bottom: 3%;
-}
-.pair_name{
-	font-size: 18px;
-	line-height: 25px;
-	width: 100%;
-	color: #2a67cb;
-}
-.part_fotos{
-	display: flex;
-	margin-top: 18px;
-	justify-content: space-around;
-}
-.part_fotos img{
-	max-width: 40%;
-	margin: auto;
-}
-.car_part .price{
-	margin-top: 5px;
-}
-.pair_name:hover{
-	border-bottom: 1px solid #2a67cb;
-}
 @media screen and (max-width: 381px) {
 	.social a{
 		width: 33%;
@@ -523,13 +364,17 @@ footer p{
 	.social{
 		width: 200px ;
 	}
-	footer{
-		margin-top: 70px;
-	}
 }
 @media screen and (max-width: 946px) {
 	.auto-news{
 		display: none;
+	}
+	.main_items{
+		display: block;
+	}
+	.topnav li .currentPage{
+		background-color: #000;
+		color: #fff;
 	}
 	.services_container{
 		width: 100%;
@@ -565,11 +410,18 @@ footer p{
 	.topnav li {
 		display: block;
 		margin-right: 0;
-		padding: 14px 16px;
+		
 	}
 	.topnav li a{
-		width: 100%;
-		padding: auto;
+		padding: 14px 16px;
+		text-align: left;
+	}
+	.topnav li a:active{
+		background-color: #000;
+		color: #fff;
+	}
+	.topnav li a:hover{
+		border-bottom: 0;
 	}
 	.topnav{
 		z-index: 100;
@@ -579,9 +431,23 @@ footer p{
 	}
 	nav{
 		max-width:100%;
+		height: 0;
+		padding: 0;
 	}
-	main{
-		margin-top: -60px;
+
+	.about_items{
+		width: 95%;
+		display: block;
+		margin: 0 auto 50px;
+	}
+	.about{
+		font-size: 25px;
+		text-align: left;
+		margin-top: 25px;
+		line-height: 36px;
+	}
+	.title_about{
+		margin-top: 30px;	
 	}
 }
 @media screen and (max-width: 705px) {
@@ -649,5 +515,12 @@ footer p{
 	}
 	.logo{
 		padding-top: 25px;
+	}
+	.title_about{
+		font-size: 23px;
+	}
+	.about{
+		font-size: 18px;
+		line-height: 25px;
 	}
 }
