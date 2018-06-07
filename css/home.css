@@ -9,6 +9,11 @@ nav li{
 	text-decoration: none;
 	list-style: none;
 }
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
 html,
 body {
   height: 100%;
@@ -108,12 +113,7 @@ nav{
 	margin-top: -35px;
 	outline: none;
 }
-.owl-wrapper-outer {
-	border: 1px solid #777;
-	border-radius: 5px;
-	overflow: hidden;
-	background: white;
-}
+
 .next{
 	right: 0;
 	margin-right: 13px;
@@ -187,7 +187,7 @@ nav{
 	font-family: 'Baskerville Old Face', sans-serif;
 	margin: 60px 0 0 5px;
 }
-.recommendations{
+.recommendations, .news, .popular{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -196,7 +196,7 @@ nav{
 	justify-content: center;
 	margin-top: 40px;
 }
-.popular{
+/* .popular{
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -213,7 +213,7 @@ nav{
 	display: flex;
 	justify-content: center;
 	margin-top: 40px;
-}
+} */
 .recommendation_items, .popular_items, .news_items{
 	width: 100%;
 	display: -webkit-flex;
@@ -223,9 +223,10 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	position: relative;
+	flex-flow: row wrap;
 }
 .sep_line{
-	max-width: 865px;
+	max-width: 85%;
 	margin: 0 auto;
 	height: 1px;
 	border-bottom:1px solid #000;
@@ -289,28 +290,201 @@ footer{
 	text-align: center;
 	padding-top:25px; 
 }
+footer{
+	flex: 0 0 auto;
+	width: 100%;
+	height: auto;
+	background:black;
+	margin: 0 auto;
+	text-align: center;
+	padding-top:25px; 
+}
 footer p{
 	color: white;
 	margin-bottom: 5px;
 } 
-.social .v{
-	margin-left: 20px; 
-}
 .social img{ 
 	margin-bottom: 10px;
-
 }
 .social img:hover{
 	background-color: #494949;
 	border-radius: 50%;
 }
+.social_container{
+	display: flex;
+	justify-content: center;
+}
+.social{
+	width: 390px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
 
-
-
-
-
-.mob_nav p{
+.mob_nav{
 	color: #fff;
 	font-size: 40px;
 	display: none;
+}
+.mobCompanyNews{
+	display: none;
+}
+@media screen and (max-width: 946px) {
+	.main_items{
+		display: block;
+	}
+	.topnav li .currentPage{
+		background-color: #000;
+		color: #fff;
+	}
+	.signin-signup{
+		display: none;
+	}
+	.logo{
+		display: block;
+		padding-top: 30px;
+		width: 70%;
+		background: #000;
+		padding-left: 10px;
+	}
+	.return{
+		bottom: -200%;
+	}
+	header{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+	}
+	.mob_nav{
+		display: block;
+		color: #fff;
+		font-size: 60px;
+		padding: 10px 25px;
+	}
+	.mob_nav:active{
+		background-color: rgba(255, 255, 255, 0.4)
+	}
+	.topnav li {
+		display: block;
+		margin-right: 0;
+		
+	}
+	.topnav li a{
+		padding: 14px 16px;
+		text-align: left;
+	}
+	.topnav li a:active{
+		background-color: #000;
+		color: #fff;
+	}
+	.topnav li a:hover{
+		border-bottom: 0;
+	}
+	.topnav{
+		z-index: 100;
+		border-bottom: 2px solid #000;
+		display: none;
+		text-align: left;
+		font-size: 20px;
+	}
+	nav{
+		max-width:100%;
+		height: 0;
+		padding: 0;
+	}
+}
+@media screen and (max-width: 880px){
+	.items .name{
+		margin-top: 60px 0 0 0;
+		text-align: center;
+	}
+	.news_item, .recommendation_item, .popular_item{
+		width: 40%;
+		text-align: center;
+		margin-top: 25px;
+	}
+	.slides{
+		display: none;
+	}
+	.mobCompanyNews{
+		display: block;
+		max-width: 80%;
+		margin: 30px auto 0;
+	}
+	.companyNews_item{
+		display: block;
+		margin-top: 30px;
+	}
+	.companyNews_item img{
+		width: 40%;
+		float: left;
+		margin-right: 15px;
+	}
+	.companyNews_item h3{
+		color: #000;
+		margin-bottom: 10px;
+		font-family: 'Baskerville Old Face', sans-serif;
+		font-size: 21px;
+	}
+	.mobCompanyNews h1{
+		font-family: 'Baskerville Old Face', sans-serif;
+		text-align: center;
+		border-bottom: 1px solid #000;
+		padding: 5px;
+		margin: auto;
+		width: 80%;
+	}
+	.companyNews_item p{ 
+		color: #000;
+		line-height: 23px;
+	}
+}
+@media screen and (max-width: 705px) {
+	.mob_nav{
+		font-size: 50px;
+		padding: 5px 15px;
+	}
+	.logo{
+		padding-top: 25px;
+	}
+}
+@media screen and (max-width: 575px){
+	.news_item, .recommendation_item, .popular_item{
+		width: 100%;
+		text-align: center;
+		margin-top: 30px;
+	}
+}
+@media screen and (max-width: 490px){
+	.mob_nav{
+		font-size: 50px;
+		padding: 0 15px;
+	}
+	.logo{
+		padding-top: 25px;
+	}
+	.news_item, .recommendation_item, .popular_item{
+		width: 80%;
+		text-align: center;
+		margin-top: 30px;
+	}
+	.companyNews_item img{
+		width: 100%;
+		float: none;
+		margin: auto;
+		margin-right: 15px;
+	}
+	.companyNews_item p{ 
+		color: #000;
+		line-height: 23px;
+		margin-top: 10px;
+	}
+}
+@media screen and (max-width: 381px) {
+	.social a{
+		width: 33%;
+	}
+	.social{
+		width: 200px ;
+	}
 }

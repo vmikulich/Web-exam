@@ -312,7 +312,7 @@ nav{
 	margin-bottom: 71px;
 }
 .next_page *{
-	margin-left: 5px;
+	padding-left: 5px;
 	color: #000;
 }
 .next_page a:hover{
